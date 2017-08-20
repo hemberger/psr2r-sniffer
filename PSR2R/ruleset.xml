@@ -92,4 +92,11 @@
 	<rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
 	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace"/>
 
+	<rule ref="./vendor/spryker/code-sniffer/Spryker/ruleset.xml">
+		<exclude name="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"></exclude>
+		<exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect"></exclude>
+		<exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact"></exclude>
+		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration"></exclude>
+		<exclude name="Spryker.Classes.ClassDeclaration"></exclude>
+	</rule>
 </ruleset>

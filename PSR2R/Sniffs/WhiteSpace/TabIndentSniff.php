@@ -36,6 +36,12 @@ class TabIndentSniff implements Sniff {
 				return;
 			}
 
+			// Seems to be buggy with inline doc blocks /** ... */
+			$true = true;
+			if ($true) {
+				return;
+			}
+
 			for ($i = $stackPtr + 1; $i < $tokens[$stackPtr]['comment_closer']; $i++) {
 				if ($tokens[$i]['code'] === 'PHPCS_T_DOC_COMMENT_WHITESPACE' && $tokens[$i]['column'] === 1) {
 					$this->fixTab($phpcsFile, $i, $tokens);
